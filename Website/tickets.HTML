@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> MusicFest - Tickets </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class = "site-header">
+    <div class = "topbar">
+      <h1 class= "site-title"> MusicFest 2025 <sub style="font-size: 20px;">31st December 2025 · The University of Leicester</sub></h1>
+        <nav class = "main-nav">
+            <a href="index.html"> Home </a> |
+            <a href="lineup.html"> Lineup </a> |
+            <a href="schedule.html"> Schedule </a>|
+            <button onclick="location.href='tickets.html'"> Buy Tickets </button>
+        </nav>
+    </div>
+  </header>
+    
+  <main>
+    <section class ="page-intro">
+      <h2> Book Tickets</h2>
+      <p> Select ticket options below to secure your place at MusicFest2025 !</p>
+    </section>
+
+    <section class="form-section">
+      <form id="ticket-form" novalidate>
+
+        <!-- Full Name -->
+        <label for="fullname">Full Name <span class="required">*</span></label>
+        <input id="fullname" name="fullname" type="text" required maxlength="100" />
+
+        <!-- Email -->
+        <label for="email">Email Address <span class="required">*</span></label>
+        <input id="email" name="email" type="email" required />
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number <span class="required">*</span></label>
+        <input id="phone" name="phone" type="tel" pattern="^\+?[0-9\s\-]{7,15}$" placeholder="+44 7000 000000" required />
+
+        <!-- Number of tickets -->
+        <label for="quantity">Number of Tickets <span class="required">*</span></label>
+        <input id="quantity" name="quantity" type="number" min="1" max="10" value="1" required />
+
+        <!-- Ticket type -->
+        <fieldset>
+          <legend>Ticket Type <span class="required">*</span></legend>
+          <label><input type="radio" name="type" value="General" checked /> General Admission</label>
+          <label><input type="radio" name="type" value="VIP" /> VIP</label>
+          <label><input type="radio" name="type" value="Premium" /> Premium</label>
+        </fieldset>
+
+        <!-- Payment method -->
+        <label for="payment">Payment Method <span class="required">*</span></label>
+        <select id="payment" name="payment" required>
+          <option value="">Select payment method</option>
+          <option value="credit">Credit Card</option>
+          <option value="debit">Debit Card</option>
+          <option value="paypal">PayPal</option>
+        </select>
+
+        <!-- Special requirements -->
+        <label for="special">Special Requirements (dietary, accessibility)</label>
+        <textarea id="special" name="special" rows="4" maxlength="500" placeholder="e.g., wheelchair access, vegetarian meal"></textarea>
+
+        <!-- Terms & Consitions-->
+        <label class="terms">
+          <input id="terms" name="terms" type="checkbox" required />
+          I agree to the <a href="" target="_blank" rel="noopener">Terms & Conditions</a>. <span class="required">*</span>
+        </label>
+          
+        <!-- Validation messages -->
+        <div id="form-messages" aria-live="polite"></div>
+
+        <!-- Buttons -->
+        <div class="form-actions">
+          <button type="submit" id="submit-btn">Submit</button>
+          <button type="reset" id="reset-btn">Reset</button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+
+  <footer>
+    <p> &copy; 2025 MusicFest. All rights reserved. </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
