@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Performance times and stages for both days of MusicFest 2025.">
   <title> MusicFest - Schedule </title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -10,11 +11,11 @@
 <body>
   <header class = "site-header">
     <div class = "topbar">
-      <h1 class= "site-title"> MusicFest 2025 <sub style="font-size: 20px;">31st December 2025 · The University of Leicester</sub></h1>
+      <h1 class= "site-title"> MusicFest 2025 <sub class = "sub">30th - 31st December 2025 · The University of Leicester</sub></h1>
       <nav class = "main-nav">
         <a href="index.html"> Home </a> |
         <a href="lineup.html"> Lineup </a> |
-        <a href="schedule.html"> Schedule </a>|
+        <a href="schedule.html" aria-current="page"> Schedule </a>|
         <button onclick="location.href='tickets.html'"> Buy Tickets </button>
       </nav>
     </div>
@@ -46,19 +47,19 @@
 
         <tbody>
           <!-- Day 1 Performing Artists -->
-          <tr day ="day1">
+          <tr data-day="day1">
             <td>18:00 - 18:45</td>
             <td>Local Support Band</td>
             <td>Main Stage</td>
             <td>Day 1</td>
           </tr>
-          <tr day ="day1">
+          <tr data-day="day1">
             <td>19:00 - 19:45</td>
             <td>Arctic Monkeys</td>
             <td>Main Stage</td>
             <td>Day 1</td>
           </tr>
-          <tr day ="day1">
+          <tr data-day="day1">
             <td>20:00 - 20:45</td>
             <td>Radiohead</td>
             <td>Secondary Stage</td>
